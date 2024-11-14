@@ -27,7 +27,7 @@ class _SignUpState extends State<SignUp> {
             .createUserWithEmailAndPassword(email: email, password: password);
 
         ScaffoldMessenger.of(context).showSnackBar((SnackBar(
-            backgroundColor: Colors.redAccent,
+            backgroundColor: Colors.lightGreenAccent,
             content: Text(
               "Registered Successfully",
               style: TextStyle(fontSize: 20.0),
@@ -169,17 +169,7 @@ class _SignUpState extends State<SignUp> {
                                   prefixIcon: Icon(Icons.password_outlined)),
                             ),
                             SizedBox(
-                              height: 20.0,
-                            ),
-                            Container(
-                              alignment: Alignment.topRight,
-                              child: Text(
-                                "Forget Password?",
-                                style: AppWidget.semiBoldTextFeildStyle(),
-                              ),
-                            ),
-                            SizedBox(
-                              height: 40.0,
+                              height: 60.0,
                             ),
                             GestureDetector(
                               onTap: () async {

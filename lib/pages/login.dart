@@ -1,4 +1,5 @@
 import 'package:ahaar/pages/bottomnav.dart';
+import 'package:ahaar/pages/forgotpassword.dart';
 import 'package:ahaar/pages/home.dart';
 import 'package:ahaar/pages/signup.dart';
 import 'package:ahaar/widget/widget_support.dart';
@@ -150,11 +151,20 @@ class _LogInState extends State<LogIn> {
                             SizedBox(
                               height: 20.0,
                             ),
-                            Container(
-                              alignment: Alignment.topRight,
-                              child: Text(
-                                "Forget Password?",
-                                style: AppWidget.semiBoldTextFeildStyle(),
+                            GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ForgotPassword()));
+                              },
+                              child: Container(
+                                alignment: Alignment.topRight,
+                                child: Text(
+                                  "Forget Password?",
+                                  style: AppWidget.semiBoldTextFeildStyle(),
+                                ),
                               ),
                             ),
                             SizedBox(
