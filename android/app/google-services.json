@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "857677130684",
+    "project_id": "ahaar-61aba",
+    "storage_bucket": "ahaar-61aba.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:857677130684:android:561a0e366528d6ec9459b9",
+        "android_client_info": {
+          "package_name": "com.example.ahaar"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB8R_I1W5eOv5MkpigqOtwfnOQzMFRB3fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

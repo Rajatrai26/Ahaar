@@ -3,9 +3,12 @@ import 'package:ahaar/pages/home.dart';
 import 'package:ahaar/pages/login.dart';
 import 'package:ahaar/pages/onboard.dart';
 import 'package:ahaar/pages/signup.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
