@@ -32,6 +32,7 @@ class _SignUpState extends State<SignUp> {
               "Registered Successfully",
               style: TextStyle(fontSize: 20.0),
             ))));
+
         // ignore: use_build_context_synchronously
         Navigator.pushReplacement(
             context, MaterialPageRoute(builder: (context) => BottomNav()));

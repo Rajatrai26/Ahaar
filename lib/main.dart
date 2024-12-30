@@ -1,3 +1,4 @@
+import 'package:ahaar/admin/admin_login.dart';
 import 'package:ahaar/pages/bottomnav.dart';
 import 'package:ahaar/pages/home.dart';
 import 'package:ahaar/pages/login.dart';
@@ -39,8 +40,9 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        // home: Home());
-        home: Onboard());
+        // home: Home());//hi
+        // home: Onboard());
+        home: AdminLogin());
   }
 }
 
