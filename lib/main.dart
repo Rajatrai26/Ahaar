@@ -1,4 +1,5 @@
 import 'package:ahaar/admin/admin_login.dart';
+import 'package:ahaar/admin/home_admin.dart';
 import 'package:ahaar/pages/bottomnav.dart';
 import 'package:ahaar/pages/home.dart';
 import 'package:ahaar/pages/login.dart';
@@ -42,7 +43,8 @@ class MyApp extends StatelessWidget {
         ),
         // home: Home());//hi
         // home: Onboard());
-        home: AdminLogin());
+        // home: AdminLogin());
+        home: HomeAdmin());
   }
 }
 
