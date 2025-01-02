@@ -9,6 +9,11 @@ class AddFood extends StatefulWidget {
 }
 
 class _AddFoodState extends State<AddFood> {
+  final List<String> items = ['Meal', 'Snacks', 'Packaged Snacks', 'Beverages'];
+  String? value;
+  TextEditingController namecontroller = new TextEditingController();
+  TextEditingController pricecontroller = new TextEditingController();
+  TextEditingController detailcontroller = new TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,17 +33,156 @@ class _AddFoodState extends State<AddFood> {
           style: AppWidget.HeadLineTextFeildStyle(),
         ),
       ),
-      body: Container(
-        margin:
-            EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 30.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              "Upload the Item ",
-              style: AppWidget.semiBoldTextFeildStyle(),
-            )
-          ],
+      body: SingleChildScrollView(
+        child: Container(
+          margin:
+              EdgeInsets.only(left: 20.0, right: 20.0, top: 20.0, bottom: 30.0),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Upload the Item ",
+                style: AppWidget.semiBoldTextFeildStyle(),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Center(
+                child: Material(
+                  elevation: 4.0,
+                  borderRadius: BorderRadius.circular(20),
+                  child: Container(
+                    width: 150,
+                    height: 150,
+                    decoration: BoxDecoration(
+                        border: Border.all(color: Colors.black, width: 1.5),
+                        borderRadius: BorderRadius.circular(20)),
+                    child: Icon(
+                      Icons.camera_alt_outlined,
+                      color: const Color.fromARGB(255, 210, 7, 255),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Text(
+                "Item Name",
+                style: AppWidget.semiBoldTextFeildStyle(),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Color(0xFFececf8),
+                    borderRadius: BorderRadius.circular(10)),
+                child: TextField(
+                  controller: namecontroller,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Enter Item Name",
+                    hintStyle: AppWidget.LightTextFeildStyle(),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Text(
+                "Item Price",
+                style: AppWidget.semiBoldTextFeildStyle(),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Color(0xFFececf8),
+                    borderRadius: BorderRadius.circular(10)),
+                child: TextField(
+                  controller: pricecontroller,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Enter Item Price",
+                    hintStyle: AppWidget.LightTextFeildStyle(),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Text(
+                "Item detail",
+                style: AppWidget.semiBoldTextFeildStyle(),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 20.0),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Color(0xFFececf8),
+                    borderRadius: BorderRadius.circular(10)),
+                child: TextField(
+                  maxLines: 6,
+                  controller: detailcontroller,
+                  decoration: InputDecoration(
+                    border: InputBorder.none,
+                    hintText: "Enter Item Detail",
+                    hintStyle: AppWidget.LightTextFeildStyle(),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Text(
+                "Select category",
+                style: AppWidget.semiBoldTextFeildStyle(),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              Container(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                width: MediaQuery.of(context).size.width,
+                decoration: BoxDecoration(
+                    color: Color(0xFFececf8),
+                    borderRadius: BorderRadius.circular(10)),
+                child: DropdownButtonHideUnderline(
+                  child: DropdownButton<String>(
+                    items: items
+                        .map((item) => DropdownMenuItem<String>(
+                            value: item,
+                            child: Text(
+                              item,
+                              style: TextStyle(
+                                  fontSize: 18.0, color: Colors.black),
+                            )))
+                        .toList(),
+                    onChanged: ((value) => setState(() {
+                          this.value = value;
+                        })),
+                    dropdownColor: Colors.white,
+                    hint: Text("Select Category"),
+                    iconSize: 36,
+                    icon: Icon(
+                      Icons.arrow_drop_down,
+                      color: Colors.black,
+                    ),
+                    value: value,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
