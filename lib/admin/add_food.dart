@@ -204,7 +204,11 @@ class _AddFoodState extends State<AddFood> {
                     )),
                   ),
                 ),
+<<<<<<< HEAD
               ) //add button
+=======
+              )
+>>>>>>> 8dbbd2c62ce7961b8398413b2f360602ed00a48f
             ],
           ),
         ),
