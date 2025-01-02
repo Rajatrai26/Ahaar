@@ -181,6 +181,30 @@ class _AddFoodState extends State<AddFood> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 30.0,
+              ),
+              Center(
+                child: Material(
+                  elevation: 5.0,
+                  borderRadius: BorderRadius.circular(10),
+                  child: Container(
+                    padding: EdgeInsets.symmetric(vertical: 5.0),
+                    width: 150,
+                    decoration: BoxDecoration(
+                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10)),
+                    child: Center(
+                        child: Text(
+                      "Add",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20.0,
+                          fontWeight: FontWeight.bold),
+                    )),
+                  ),
+                ),
+              )
             ],
           ),
         ),
